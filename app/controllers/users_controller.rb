@@ -32,9 +32,13 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def destroy
+    User.find(session[:user_id]).destroy
+    reset_session
+    redirect_to
   end
 
   private
