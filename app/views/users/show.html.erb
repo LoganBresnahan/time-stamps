@@ -9,3 +9,11 @@
 <% @user.notes.each do |note| %>
   <%= link_to note.title, note_path(note) %>
 <% end %>
+
+<h3>All videos you've used.</h3>
+<% @user.videos.each do |video| %>
+  <%= link_to video.title, video_path(video) %>
+<% end %>
+
+<h3>Total timestamps created</h3>
+<%= @user.time_stamps.size %>
