@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   def destroy
     User.find(session[:user_id]).destroy
     reset_session
-    redirect_to
+    redirect_to '/'
   end
 
   private
