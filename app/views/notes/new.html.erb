@@ -1,1 +1,11 @@
 <h2>Get started by making a new note.</h2>
+
+<%= form_for :note, url: notes_path do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: 'title' %>
+  </div>
+  <div>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  </div>
+<% end %>
