@@ -1,0 +1,15 @@
+<%= flash[:user_login_error] %> <% if flash[:user_login_error] %>
+
+<%= form_for :session, :url sessions_path do |f| %>
+  <div>
+    <%= f.label :Email %>
+    <%= f.email_field :email, placeholder: 'email' %>
+  </div>
+  <div>
+    <%= f.label :Password %>
+    <%= f.password_field :password, placeholder: 'password' %>
+  </div>
+  <div>
+    <%= f.submit :Login %>
+  </div>
+<% end %>
