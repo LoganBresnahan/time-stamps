@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160322015959) do
+ActiveRecord::Schema.define(version: 20160322153626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "notes", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.integer  "user_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "time_stamps", force: :cascade do |t|
+    t.string   "stamp"
+    t.string   "body"
+    t.integer  "note_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false
@@ -22,6 +37,14 @@ ActiveRecord::Schema.define(version: 20160322015959) do
     t.string   "password_digest", null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.string   "url",        null: false
+    t.integer  "note_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

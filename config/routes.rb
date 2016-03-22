@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  # root 'videos#new'
+  root 'notes#new'
   resources :users
-
+  resources :notes, except: [:index]
+  resources :videos
+  resources :time_stamps, except: [:idex]
 
 
 
