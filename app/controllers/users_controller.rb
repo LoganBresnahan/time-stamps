@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to user_path(user)
     else
-      flash[:user_create_error] user.errors.full_messages.to_sentence
+      flash[:user_create_error] = user.errors.full_messages.to_sentence
       render :new
     end
   end
@@ -29,6 +29,7 @@ class UsersController < ApplicationController
     else
       flash[:user_update_error] = user.errors.full_messages.to_sentence
       render :edit
+    end
   end
 
   def edit
