@@ -1,6 +1,6 @@
 <%= flash[:user_login_error] %> <% if flash[:user_login_error] %>
 
-<%= form_for :session, :url sessions_path do |f| %>
+<%= form_for :session, :url session_path do |f| %>
   <div>
     <%= f.label :Email %>
     <%= f.email_field :email, placeholder: 'email' %>
