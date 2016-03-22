@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :users
   resources :notes, except: [:index]
   resources :videos
-  resources :time_stamps, except: [:idex]
+  resources :time_stamps, except: [:index]
+  resources :sessions, only: [:create, :new, :destroy]
 
 
 
