@@ -1,6 +1,9 @@
 <h2>Profile</h2>
 <%= @user.username %>
-<%= link_to :edit, edit_user_path(@user) %>
+
+<p>
+  <%= link_to :edit, edit_user_path(@user) %>
+</p>
 
 <h3>Your Notes</h3>
 <% @user.notes.each do |note| %>
