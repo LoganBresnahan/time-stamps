@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     else
       flash[:user_login_error] = user.errors.full_messages.to_sentence
       render :new
+    end
   end
 
   def new
