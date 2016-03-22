@@ -1,1 +1,18 @@
 <h2>Get started by making a new note.</h2>
+
+<% if current_user %>
+  <%= form_for :note, url: notes_path do |f| %>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title, placeholder: 'title' %>
+    </div>
+    <div>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+    </div>
+    <div>
+      <%= f.submit 'new note' %>
+    </div>
+  <% end %>
+<% else %>
+  <h3>Login to start making a note.</h3>
+<% end %>

@@ -1,0 +1,19 @@
+<h2>Edit your profile</h2>
+
+<%= form_for :user, method: :put, url: user_path do |f| %>
+  <div>
+    <%= f.label :username %>
+    <%= f.text_field :username, placeholder: "#{@user.username}" %>
+  </div>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email, placeholder: "#{@user.email}" %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password, placeholder: "password" %>
+  </div>
+  <div>
+    <%= f.submit "commit changes" %>
+  </div>
+<% end %>
