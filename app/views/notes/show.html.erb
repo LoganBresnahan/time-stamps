@@ -13,6 +13,12 @@
     <div>
       <%= video.link %>
     </div>
+    <div>
+      <%= link_to :edit, edit_video_path(video) %>
+    </div>
+    <div>
+      <%= render 'videos/delete' %>
+    </div>
   <% end %>
 </div>
 
