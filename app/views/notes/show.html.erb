@@ -4,3 +4,18 @@
 <p>
   <%= link_to :edit, edit_note_path(@note) %>
 </p>
+
+<div>
+  <%= render '/videos/new' %>
+</div>
+
+<div>
+  <%= render '/stamps/new' %>
+</div>
+
+<div>
+  <% @note.stamps.each do |stamp| %>
+    <%= stamp.time %>
+    <%= stamp.body %>
+  <% end %>
+</div>
