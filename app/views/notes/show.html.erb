@@ -6,6 +6,13 @@
 </p>
 
 <div>
+  <% @note.videos.each do |video| %>
+    <%= video.title %>
+    <%= video.url %>
+  <% end %>
+</div>
+
+<div>
   <%= render '/videos/new' %>
 </div>
 
