@@ -1,0 +1,15 @@
+<h3>edit your video</h3>
+
+<%= form_for :video, method: :put, url: video_path do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: "#{@video.title}" %>
+  </div>
+  <div>
+    <%= f.label :link %>
+    <%= f.text_field :link, placeholder: "#{@video.link}" %>
+  </div>
+  <div>
+    <%= f.submit 'submit' %>
+  </div>
+<% end %>

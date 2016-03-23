@@ -19,7 +19,7 @@ class VideosController < ApplicationController
 
   def update
     video = Video.find(params[:id])
-    if user.update_attributes(video_params)
+    if video.update_attributes(video_params)
       redirect_to note_path(video.note_id)
     else
       flash[:video_update_error] = video.errors.full_messages.to_sentence

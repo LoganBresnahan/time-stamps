@@ -2,7 +2,7 @@
   <%= @note.title %>
 </h2>
 <p>
-  <%= link_to :edit, edit_note_path(@note) %>
+  <%= link_to 'edit note', edit_note_path(@note) %>
 </p>
 
 <div>
@@ -14,7 +14,7 @@
       <%= video.link %>
     </div>
     <div>
-      <%= link_to :edit, edit_video_path(video) %>
+      <%= link_to 'edit video', edit_video_path(video) %>
     </div>
     <div>
       <%= render partial: 'videos/delete', locals: {video: video} %>
