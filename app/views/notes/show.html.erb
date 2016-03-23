@@ -7,8 +7,12 @@
 
 <div>
   <% @note.videos.each do |video| %>
-    <%= video.title %>
-    <%= video.link %>
+    <div>
+      <strong><%= video.title %></strong>
+    </div>
+    <div>
+      <%= video.link %>
+    </div>
   <% end %>
 </div>
 
@@ -22,7 +26,9 @@
 
 <div>
   <% @note.stamps.each do |stamp| %>
-    <%= stamp.time %>
-    <%= stamp.body %>
+    <ul>
+      <strong><%= stamp.time %></strong>
+      <%= stamp.body %>
+    </ul>
   <% end %>
 </div>
