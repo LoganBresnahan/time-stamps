@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
 
    has_many :notes
    has_many :videos, through: :notes
-   has_many :time_stamps, through: :notes
+   has_many :stamps, through: :notes
 end
