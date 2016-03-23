@@ -1,0 +1,15 @@
+<h3>Make a new stamp</h3>
+
+<%= form_for :stamp, url: stamps_path do |f| %>
+  <div>
+    <%= f.label :time %>
+    <%= f.text_field :time, placeholder "time" %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_field :body, placeholder "body" %>
+  </div>
+  <div>
+    <%= f.submit "insert a new timestamp" %>
+  </div>
+<% end %>
