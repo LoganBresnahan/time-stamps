@@ -10,6 +10,9 @@
     <%= f.text_field :link, placeholder: "paste youtube link here" %>
   </div>
   <div>
+    <%= f.hidden_field :note_id, value: @note.id %>
+  </div>
+  <div>
     <%= f.submit "insert the new video" %>
   </div>
 <% end %>

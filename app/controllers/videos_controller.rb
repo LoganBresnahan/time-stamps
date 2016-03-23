@@ -7,10 +7,10 @@ class VideosController < ApplicationController
   def create
     video = Video.new(video_params)
     if video.save
-      #redirect_to notes_path(something)
+       redirect_to note_path(video.note_id)
     else
       flash[:video_create_error] = video.errors.full_messages.to_sentence
-      #redirect_to notes_path(something)
+      redirect_to note_path(video.note_id)
     end
   end
 
@@ -20,9 +20,9 @@ class VideosController < ApplicationController
   def update
     video = Video.find(params[:id])
     if user.update_attributes(video_params)
-      redirect_to note_path(something)
+      redirect_to note_path(@note)
     else
-      flash[:video_update_error] video.errors.full_messages.to_sentence
+      flash[:video_update_error] = video.errors.full_messages.to_sentence
       render :edit
     end
   end
