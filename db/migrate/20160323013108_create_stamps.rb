@@ -1,7 +1,7 @@
-class CreateTimeStamps < ActiveRecord::Migration
+class CreateStamps < ActiveRecord::Migration
   def change
-    create_table :time_stamps do |t|
-      t.string :stamp
+    create_table :stamps do |t|
+      t.string :time
       t.string :body
       t.integer :note_id, null: false
 
