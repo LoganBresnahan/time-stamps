@@ -17,7 +17,7 @@
       <%= link_to :edit, edit_video_path(video) %>
     </div>
     <div>
-      <%= render 'videos/delete' %>
+      <%= render partial: 'videos/delete', locals: {video: video} %>
     </div>
   <% end %>
 </div>
