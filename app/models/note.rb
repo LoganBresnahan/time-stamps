@@ -4,5 +4,5 @@ class Note < ActiveRecord::Base
 
   belongs_to :user
   has_many :videos
-  has_many :timestamps
+  has_many :time_stamps
 end
