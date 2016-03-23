@@ -42,7 +42,7 @@ class StampsController < ApplicationController
   private
 
   def stamp_params
-    params.require(:stamp).permit(:stamp, :body, :note_id)
+    params.require(:stamp).permit(:time, :body, :note_id)
   end
 
 end
