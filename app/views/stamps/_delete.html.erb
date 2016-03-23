@@ -1,0 +1,3 @@
+<%= form_for :stamp, method: :delete, url: stamp_path(stamp.id), data: { confirm: "are you sure?" } do |f| %>
+  <%= f.submit :delete %>
+<% end %>

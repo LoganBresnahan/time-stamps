@@ -17,7 +17,7 @@
       <%= link_to 'edit video', edit_video_path(video) %>
     </div>
     <div>
-      <%= render partial: 'videos/delete', locals: {video: video} %>
+      <%= render partial: 'videos/delete', locals: { video: video } %>
     </div>
   <% end %>
 </div>
@@ -36,5 +36,11 @@
       <strong><%= stamp.time %></strong>
       <%= stamp.body %>
     </ul>
+    <div>
+      <%= link_to 'edit timestamp', edit_stamp_path(stamp) %>
+    </div>
+    <div>
+      <%= render partial: 'stamps/delete', locals: { stamp: stamp } %>
+    </div>
   <% end %>
 </div>
