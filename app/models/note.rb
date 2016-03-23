@@ -3,6 +3,6 @@ class Note < ActiveRecord::Base
   validates :user_id, presence: true
 
   belongs_to :user
-  has_many :videos
-  has_many :stamps
+  has_many :videos, dependent: :destroy
+  has_many :stamps, dependent: :destroy
 end

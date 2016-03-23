@@ -2,5 +2,45 @@
   <%= @note.title %>
 </h2>
 <p>
-  <%= link_to :edit, edit_note_path(@note) %>
+  <%= link_to 'edit note', edit_note_path(@note) %>
 </p>
+
+<div>
+  <% @note.videos.each do |video| %>
+    <div>
+      <strong><%= video.title %></strong>
+    </div>
+    <div>
+      <%= video.link %>
+    </div>
+    <div>
+      <%= link_to 'edit video', edit_video_path(video) %>
+    </div>
+    <div>
+      <%= render partial: 'videos/delete', locals: { video: video } %>
+    </div>
+  <% end %>
+</div>
+
+<div>
+  <%= render '/videos/new' %>
+</div>
+
+<div>
+  <%= render '/stamps/new' %>
+</div>
+
+<div>
+  <% @note.stamps.each do |stamp| %>
+    <ul>
+      <strong><%= stamp.time %></strong>
+      <%= stamp.body %>
+    </ul>
+    <div>
+      <%= link_to 'edit timestamp', edit_stamp_path(stamp) %>
+    </div>
+    <div>
+      <%= render partial: 'stamps/delete', locals: { stamp: stamp } %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,18 @@
+<h3>New Video</h3>
+
+<%= form_for :video, url: videos_path do |f|%>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: "title" %>
+  </div>
+  <div>
+    <%= f.label :link %>
+    <%= f.text_field :link, placeholder: "paste youtube link here" %>
+  </div>
+  <div>
+    <%= f.hidden_field :note_id, value: @note.id %>
+  </div>
+  <div>
+    <%= f.submit "insert the new video" %>
+  </div>
+<% end %>

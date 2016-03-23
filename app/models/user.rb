@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
    validates :email, presence: true, uniqueness: true
    has_secure_password
 
-   has_many :notes
+   has_many :notes, dependent: :destroy
    has_many :videos, through: :notes
    has_many :stamps, through: :notes
 end

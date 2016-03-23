@@ -1,0 +1,15 @@
+<h3>edit your timestamp</h3>
+
+<%= form_for :stamp, method: :put, url: stamp_path do |f| %>
+  <div>
+    <%= f.label :time %>
+    <%= f.text_field :time, placeholder: "#{@stamp.time}" %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_field :body, placeholder: "#{@stamp.body}" %>
+  </div>
+  <div>
+    <%= f.submit 'submit' %>
+  </div>
+<% end %>
