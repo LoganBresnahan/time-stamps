@@ -1,3 +1,11 @@
+$(document).on(ready){
+
+  $(#video-submit).on(click)function(){
+    function data() = this.serialize;
+  }
+
+}
+
 // 2. This code loads the IFrame Player API code asynchronously.
      var tag = document.createElement('script');
 
