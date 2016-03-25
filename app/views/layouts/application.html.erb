@@ -8,12 +8,17 @@
 </head>
 <body>
   <nav>
-    <header class='nav-wrapper'>
-      <ul>
+    <div class='nav-wrapper'>
+      <%= link_to "TimeStamps", root_url %>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id='nav-mobile' class='left hide-on-med-and-down'>
         <li> <%= link_to 'home', root_url %> </li>
         <%= render '/sessions/login' %>
       </ul>
-    </header>
+      <ul class='side-nav' id='mobile-demo'>
+        <%= render '/sessions/login' %>
+      </ul>
+    </div>
   </nav>
 
 <%= yield %>
