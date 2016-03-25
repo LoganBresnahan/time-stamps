@@ -1,17 +1,17 @@
 
-$(document).ready(function(){
-
-  $('#video-submit').on(click, function(){
-    // function data(){} = this.serialize;
-  })
-
-})
-
-function youtubeParser(url){
-  var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
-  var match = url.match(regExp);
-  return (match&&match[7].length==11)? match[7] : false;
-};
+// $(document).ready(function(){
+//
+//   $('#video-submit').on(click, function(){
+//     // function data(){} = this.serialize;
+//   })
+//
+// })
+//
+// function youtubeParser(url){
+//   var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+//   var match = url.match(regExp);
+//   return (match&&match[7].length==11)? match[7] : false;
+// };
 // 2. This code loads the IFrame Player API code asynchronously.
      var tag = document.createElement('script');
 
