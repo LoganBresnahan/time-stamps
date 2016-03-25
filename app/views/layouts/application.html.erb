@@ -7,9 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <%= render '/sessions/login' %>
-  </header>
+  <nav>
+    <header class='nav-wrapper'>
+      <ul>
+        <li> <%= link_to 'home', root_url %> </li>
+        <%= render '/sessions/login' %>
+      </ul>
+    </header>
+  </nav>
 
 <%= yield %>
 
