@@ -11,7 +11,7 @@
       <strong><%= video.title %></strong>
     </div>
     <div>
-      <%= video.link %>
+      <div id="player"></div>
     </div>
     <div>
       <%= link_to 'edit video', edit_video_path(video) %>
@@ -22,9 +22,11 @@
   <% end %>
 </div>
 
-<div>
-  <%= render '/videos/new' %>
-</div>
+<% if @note.videos.size < 1 %>
+  <div>
+    <%= render '/videos/new' %>
+  </div>
+<% end %>
 
 <div>
   <%= render '/stamps/new' %>
