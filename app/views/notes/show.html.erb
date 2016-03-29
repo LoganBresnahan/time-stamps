@@ -1,9 +1,11 @@
-<h2>
-  <%= @note.title %>
-</h2>
-<p>
-  <%= link_to 'edit note', edit_note_path(@note) %>
-</p>
+<header class='boxed-edit'>
+  <h2 id='note-title'>
+    <%= @note.title %>
+  </h2>
+  <p id='note-edit'>
+    <%= link_to 'edit note', edit_note_path(@note) %>
+  </p>
+</header>
 
 <div>
   <% @note.videos.each do |video| %>

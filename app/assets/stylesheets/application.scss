@@ -20,3 +20,8 @@ $primary-color: color("cyan", "lighten-2") !default;
 
 
 @import "materialize/extras/nouislider";
+
+/* Overide materialize container */
+.container {
+  width: 95%;
+}
