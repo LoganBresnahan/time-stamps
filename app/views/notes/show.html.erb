@@ -1,47 +1,53 @@
-<header class='boxed-edit'>
-  <h2 id='note-title'> <%= @note.title %> </h2>
-  <p id='note-edit'> <%= link_to 'edit note', edit_note_path(@note), remote: true %> </p>
-</header>
-<div class='edit-form' style="display:none;"></div>
+<div class='row'>
+  <div class='col s6'>
+    <header class='boxed-edit'>
+      <h2 id='note-title'> <%= @note.title %> </h2>
+      <p id='note-edit'> <%= link_to 'edit note', edit_note_path(@note), remote: true %> </p>
+    </header>
+    <div class='edit-form' style="display:none;"></div>
 
-<div>
-  <% @note.videos.each do |video| %>
     <div>
-      <h5 id='video-title'><%= video.title %></h5>
+      <% @note.videos.each do |video| %>
+        <div>
+          <h5 id='video-title'><%= video.title %></h5>
+        </div>
+        <div>
+          <div id="player"></div>
+        </div>
+        <div>
+          <%= link_to 'edit video', edit_video_path(video) %>
+        </div>
+        <div>
+          <%= render partial: 'videos/delete', locals: { video: video } %>
+        </div>
+      <% end %>
     </div>
-    <div>
-      <div id="player"></div>
-    </div>
-    <div>
-      <%= link_to 'edit video', edit_video_path(video) %>
-    </div>
-    <div>
-      <%= render partial: 'videos/delete', locals: { video: video } %>
-    </div>
-  <% end %>
-</div>
 
-<% if @note.videos.size < 1 %>
-  <div>
-    <%= render '/videos/new' %>
+    <% if @note.videos.size < 1 %>
+      <div>
+        <%= render '/videos/new' %>
+      </div>
+    <% end %>
+
+    <div>
+      <%= render '/stamps/new' %>
+    </div>
   </div>
-<% end %>
 
-<div>
-  <%= render '/stamps/new' %>
-</div>
-
-<div>
-  <% @note.stamps.each do |stamp| %>
-    <ul>
-      <strong><%= stamp.time %></strong>
-      <%= stamp.body %>
-    </ul>
+  <div class='col s6'>
     <div>
-      <%= link_to 'edit timestamp', edit_stamp_path(stamp) %>
+      <% @note.stamps.each do |stamp| %>
+        <ul>
+          <strong><%= stamp.time %></strong>
+          <%= stamp.body %>
+        </ul>
+        <div>
+          <%= link_to 'edit timestamp', edit_stamp_path(stamp) %>
+        </div>
+        <div>
+          <%= render partial: 'stamps/delete', locals: { stamp: stamp } %>
+        </div>
+      <% end %>
     </div>
-    <div>
-      <%= render partial: 'stamps/delete', locals: { stamp: stamp } %>
-    </div>
-  <% end %>
+  </div>
 </div>
