@@ -41,7 +41,7 @@ class NotesController < ApplicationController
 
   def destroy
     Note.find(params[:id]).destroy
-    # redirect_to 'users notes page'
+    redirect_to user_path(current_user)
   end
 
   private

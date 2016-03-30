@@ -7,12 +7,16 @@
 
 <h3>Your Notes</h3>
 <% @user.notes.each do |note| %>
-  <%= link_to note.title, note_path(note) %>
+  <ul>
+    <li class='user-list'><%= link_to note.title, note_path(note) %></li>
+  </ul>
 <% end %>
 
 <h3>All videos you've used.</h3>
 <% @user.videos.each do |video| %>
-  <%= link_to video.title, video_path(video) %>
+  <ul>
+    <li class='user-list'><%= link_to video.title, video_path(video) %></li>
+  </ul>
 <% end %>
 
 <h3>Total timestamps created</h3>
