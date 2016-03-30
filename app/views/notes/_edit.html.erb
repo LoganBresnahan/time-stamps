@@ -1,7 +1,7 @@
 <h4>Make changes to your note.</h4>
 
 <div class='edit'>
-  <%= form_for :note, method: :put, url: note_path do |f| %>
+  <%= form_for :note, method: :put, url: note_path, id: "note-edit-form", remote: true do |f| %>
     <div>
       <%= f.label :title %>
       <%= f.text_field :title, placeholder: "#{@note.title}" %>

@@ -1,3 +1,7 @@
-$('.edit').html("<%= escape_javascript(render 'edit') %>")
+$('.edit-form').toggle().html("<%= escape_javascript(render 'edit') %>");
 
-// $('form#note-edit-form').trigger('submit.rails');
+$('form#note-edit-form').trigger('submit.rails');
+
+$('.edit').on('submit', function(){
+  $('.edit-form').toggle();
+})
