@@ -15,7 +15,7 @@
  */
 
 @import "materialize/components/color";
-$primary-color: color("cyan", "lighten-2") !default;
+$primary-color: color("cyan", "lighten-1") !default;
 @import "materialize";
 
 
@@ -24,6 +24,10 @@ $primary-color: color("cyan", "lighten-2") !default;
 /* Overide materialize container */
 .container {
   width: 95%;
+}
+
+.brand-logo {
+  margin-left: 0.25em;
 }
 
 /* Sticky Footer */
