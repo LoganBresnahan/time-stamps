@@ -1,7 +1,8 @@
 <header class='boxed-edit'>
   <h2 id='note-title'> <%= @note.title %> </h2>
-  <p id='note-edit'> <%= link_to 'edit note', edit_note_path(@note) %> </p>
+  <p id='note-edit'> <%= link_to 'edit note', edit_note_path(@note), remote: true %> </p>
 </header>
+<div class='edit' style="display:inline;"></div>
 
 <div>
   <% @note.videos.each do |video| %>
