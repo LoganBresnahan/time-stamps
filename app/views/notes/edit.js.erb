@@ -1,0 +1,7 @@
+$('.edit-form').toggle().html("<%= escape_javascript(render 'edit') %>");
+
+$('form#note-edit-form').trigger('submit.rails');
+
+$('.edit').on('submit', function(){
+  $('.edit-form').toggle();
+})

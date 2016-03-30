@@ -1,5 +1,9 @@
 #note-title {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+}
+
+#video-title {
+  text-decoration: overline;
 }
 
 .boxed-edit {
@@ -14,4 +18,12 @@
 
 .stamp-form {
   width: 50%;
+}
+
+.edit-form {
+  margin-bottom: 2em;
+}
+
+.edit {
+  width: 30%;
 }

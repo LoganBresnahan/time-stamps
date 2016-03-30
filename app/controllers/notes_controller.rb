@@ -24,11 +24,14 @@ class NotesController < ApplicationController
 
   def update
     note = Note.find(params[:id])
-    if note.update_attributes(note_params)
-      redirect_to note_path(note)
-    else
-      flash[:note_update_error] = note.errors.full_messages.to_sentence
-      render :edit
+    respond_to do |format|
+      if note.update_attributes(note_params)
+        format.html { redirect_to note_path(note) }
+        format.js
+      else
+        flash[:note_update_error] = note.errors.full_messages.to_sentence
+        render :edit
+      end
     end
   end
 
@@ -38,7 +41,7 @@ class NotesController < ApplicationController
 
   def destroy
     Note.find(params[:id]).destroy
-    # redirect_to 'users notes page'
+    redirect_to user_path(current_user)
   end
 
   private
