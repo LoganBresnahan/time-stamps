@@ -1,6 +1,6 @@
 <header class='boxed-edit'>
   <h2 id='note-title'> <%= @note.title %> </h2>
-  <p id='note-edit'> <%= link_to 'edit note', edit_note_path(@note) %> </p>
+  <p id='note-edit'> <%= button_to 'edit note', edit_note_path(@note), class: "waves-effect waves-light btn", method: 'get' %> </p>
 </header>
 
 <div>
@@ -12,7 +12,7 @@
       <div id="player"></div>
     </div>
     <div>
-      <%= link_to 'edit video', edit_video_path(video) %>
+      <%= button_to 'edit video', edit_video_path(video), class: "waves-effect waves-light btn", method: 'get' %>
     </div>
     <div>
       <%= render partial: 'videos/delete', locals: { video: video } %>
