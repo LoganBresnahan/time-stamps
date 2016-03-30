@@ -1,18 +1,18 @@
-<h3>Make a new stamp</h3>
+<h5 class='h5-headers'>New Stamp</h5>
 
-<%= form_for :stamp, url: stamps_path do |f| %>
-  <div>
-    <%= f.label :time %>
-    <%= f.text_field :time, placeholder: "time" %>
-  </div>
-  <div>
-    <%= f.label :body %>
-    <%= f.text_field :body, placeholder: "body" %>
-  </div>
-  <div>
-    <%= f.hidden_field :note_id, value: @note.id %>
-  </div>
-  <div>
-    <%= f.submit "insert a new timestamp" %>
-  </div>
-<% end %>
+<div class='stamp-form'>
+  <%= form_for :stamp, url: stamps_path do |f| %>
+    <div>
+      <%= f.text_field :time, placeholder: "time" %>
+    </div>
+    <div>
+      <%= f.text_field :body, placeholder: "body" %>
+    </div>
+    <div>
+      <%= f.hidden_field :note_id, value: @note.id %>
+    </div>
+    <div>
+      <%= f.submit "insert a new timestamp", class: "waves-effect waves-light btn"%>
+    </div>
+  <% end %>
+</div>
