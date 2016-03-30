@@ -25,3 +25,14 @@ $primary-color: color("cyan", "lighten-2") !default;
 .container {
   width: 95%;
 }
+
+/* Sticky Footer */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
