@@ -2,18 +2,6 @@ $('.edit-form').toggle().html("<%= escape_javascript(render partial: 'notes/edit
 
 // $('form#note-edit-form').trigger('submit.rails');
 
-// $('form#note-edit-form').submit('submit.rails', function(e){
-//   e.preventDefault();
-//   var values = $('#note-edit-form').serialize();
-//   console.log(values);
-//   $.ajax({
-//     url: $('note-edit-form').attr('url'),
-//     data: values
-//   }).success(function(){
-//     $('#note-title').append(values);
-//   });
-// });
-
 // $('.edit').on('submit', function(){
 //   $('.edit-form').toggle();
 // });
