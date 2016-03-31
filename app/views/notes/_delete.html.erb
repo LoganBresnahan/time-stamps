@@ -1,0 +1,3 @@
+<%= form_for :not, method: :delete, url: note_path(@note.id), data: { confirm: "are you sure?" } do |f| %>
+  <%= f.submit :delete %>
+<% end %>

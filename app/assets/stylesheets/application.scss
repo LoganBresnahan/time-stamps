@@ -15,7 +15,7 @@
  */
 
 @import "materialize/components/color";
-$primary-color: color("cyan", "lighten-2") !default;
+$primary-color: color("cyan", "lighten-1") !default;
 @import "materialize";
 
 
@@ -24,6 +24,10 @@ $primary-color: color("cyan", "lighten-2") !default;
 /* Overide materialize container */
 .container {
   width: 95%;
+}
+
+.brand-logo {
+  margin-left: 0.25em;
 }
 
 /* Sticky Footer */
@@ -35,4 +39,13 @@ body {
 
 main {
     flex: 1 0 auto;
+}
+
+/* Cross Browser wordwrap */
+.wordwrap {
+   white-space: pre-wrap;      /* CSS3 */
+   white-space: -moz-pre-wrap; /* Firefox */
+   white-space: -pre-wrap;     /* Opera <7 */
+   white-space: -o-pre-wrap;   /* Opera 7 */
+   word-wrap: break-word;      /* IE */
 }

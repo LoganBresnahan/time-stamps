@@ -2,11 +2,14 @@
 
 <div class='stamp-form'>
   <%= form_for :stamp, url: stamps_path do |f| %>
-    <div>
-      <%= f.text_field :time, placeholder: "time" %>
+    <div class='row'>
+      <div class='col s1'><a href='#' class="btn-floating btn waves-effect waves-light green", title='add'><i class="material-icons">add</i></a></div>
+      <div class='col s3'>
+        <%= f.text_field :time, placeholder: "time" %>
+      </div>
     </div>
-    <div>
-      <%= f.text_field :body, placeholder: "body" %>
+    <div class='input-field'>
+        <%= f.text_area :body, placeholder: "body", id: 'textarea1', class: 'materialize-textarea' %>
     </div>
     <div>
       <%= f.hidden_field :note_id, value: @note.id %>

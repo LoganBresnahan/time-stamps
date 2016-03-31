@@ -1,7 +1,14 @@
-$('.edit-form').toggle().html("<%= escape_javascript(render 'edit') %>");
+$('.note-edit-form').toggle().html("<%= escape_javascript(render partial: 'notes/edit') %>");
 
-$('form#note-edit-form').trigger('submit.rails');
+
 
 $('.edit').on('submit', function(){
-  $('.edit-form').toggle();
-})
+  var title = $('#note-title').val();
+  console.log(title);
+  $('#note-show-title').text(title);
+  $('.note-edit-form').toggle();
+});
+
+
+
+// $('form#note-edit-form').trigger('submit.rails');

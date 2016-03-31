@@ -1,9 +1,7 @@
-<h2>Profile</h2>
-<%= @user.username %>
-
-<p>
-  <%= link_to :edit, edit_user_path(@user) %>
-</p>
+<header class='boxed-edit'>
+  <h3><%= @user.username %></h3>
+  <p id='user-edit'><%= link_to :edit, edit_user_path(@user) %></p>
+</header>
 
 <h3>Your Notes</h3>
 <% @user.notes.each do |note| %>

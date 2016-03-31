@@ -1,5 +1,5 @@
-#note-title {
-  /*text-decoration: underline;*/
+#note-show-title {
+  color: coral;
 }
 
 #video-title {
@@ -11,13 +11,13 @@
   display: -moz-box;
 }
 
-#note-edit {
-  margin-top: 4.5em;
+#note-edit-link {
+  margin-top: 2.25em;
   margin-left: 1em;
 }
 
-.stamp-form {
-  width: 50%;
+#stamp-time-form {
+  width: 20%;
 }
 
 .edit-form {
