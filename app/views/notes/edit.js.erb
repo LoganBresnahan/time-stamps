@@ -1,7 +1,9 @@
-$('.edit-form').toggle().html("<%= escape_javascript(render partial: 'notes/edit', formats: :html) %>");
+$('.note-edit-form').toggle().html("<%= escape_javascript(render partial: 'notes/edit', formats: :html) %>");
+
+$('.edit').on('submit', function(){
+  $('.note-edit-form').toggle();
+});
+
+
 
 // $('form#note-edit-form').trigger('submit.rails');
-
-// $('.edit').on('submit', function(){
-//   $('.edit-form').toggle();
-// });
