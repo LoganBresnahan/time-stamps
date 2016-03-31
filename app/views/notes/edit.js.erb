@@ -1,6 +1,11 @@
-$('.note-edit-form').toggle().html("<%= escape_javascript(render partial: 'notes/edit', formats: :html) %>");
+$('.note-edit-form').toggle().html("<%= escape_javascript(render partial: 'notes/edit') %>");
+
+
 
 $('.edit').on('submit', function(){
+  var title = $('#note-title').val();
+  console.log(title);
+  $('#note-show-title').text(title);
   $('.note-edit-form').toggle();
 });
 

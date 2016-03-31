@@ -27,7 +27,7 @@ class NotesController < ApplicationController
     respond_to do |format|
       if note.update_attributes(note_params)
         format.html { redirect_to note_path(note) }
-        format.js
+        # format.js
       else
         flash[:note_update_error] = note.errors.full_messages.to_sentence
         render :edit

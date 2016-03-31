@@ -1,3 +1,14 @@
+// $(document).ready(function(){
+//   $('.note-edit-form').on("ajax:success", function(e, data, status, xhr){
+//     $('#note-title').append(xhr.responseText());
+//   });
+// });
+
+
+
+
+
+
 // $('.edit-form').on('click', '#note-edit-form', function(event){
 //   // event.preventDefault();
 //   console.log($(this));
