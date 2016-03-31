@@ -16,4 +16,7 @@ $('.edit-form').toggle().html("<%= escape_javascript(render 'edit') %>");
 
 $('.edit').on('submit', function(){
   $('.edit-form').toggle();
+  $('#note-title').bind('submit', function(){
+    $('#note-title').replaceWith("hello");
+  })
 })
