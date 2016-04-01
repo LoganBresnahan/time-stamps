@@ -1,6 +1,5 @@
 $('.note-edit-form').toggle().html("<%= escape_javascript(render partial: 'notes/edit') %>");
 
-
 $('.edit').ready(function(){
   $('#note-title').focus();
   var savedInput = $('#note-title').val();
@@ -16,3 +15,5 @@ $('.edit').on('submit', function(){
 
 
 // $('form#note-edit-form').trigger('submit.rails');
+
+//--------------------------------------------------------

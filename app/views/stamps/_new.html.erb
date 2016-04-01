@@ -15,7 +15,9 @@
       <%= f.hidden_field :note_id, value: @note.id %>
     </div>
     <div>
-      <%= f.submit "insert a new timestamp", class: "waves-effect waves-light btn"%>
+      <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
+        <i class='large material-icons'>done</i>
+      <% end %>
     </div>
   <% end %>
 </div>
