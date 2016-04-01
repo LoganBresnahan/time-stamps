@@ -33,6 +33,9 @@ $primary-color: color("cyan", "lighten-1") !default;
 // .btn:focus {
 //
 // }
+input:active, input:focus {
+  border-bottom: 1px solid yellow;
+}
 
 /* Sticky Footer */
 body {
