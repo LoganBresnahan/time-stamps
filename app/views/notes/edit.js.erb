@@ -1,11 +1,10 @@
 $('.note-edit-form').toggle().html("<%= escape_javascript(render partial: 'notes/edit') %>");
 
-$('.edit').ready(function(){
-  $('#note-title').focus();
-  var savedInput = $('#note-title').val();
-  $('#note-title').val('');
-  $('#note-title').val(savedInput);
-});
+$('#note-title').focus();
+var savedInput = $('#note-title').val();
+$('#note-title').val('');
+$('#note-title').val(savedInput);
+
 
 $('.edit').on('submit', function(){
   var title = $('#note-title').val();
