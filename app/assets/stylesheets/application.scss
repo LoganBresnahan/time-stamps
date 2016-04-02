@@ -30,6 +30,13 @@ $primary-color: color("cyan", "lighten-1") !default;
   margin-left: 0.25em;
 }
 
+// .btn:focus {
+//
+// }
+input:active, input:focus {
+  border-bottom: 1px solid yellow;
+}
+
 /* Sticky Footer */
 body {
     display: flex;

@@ -1,14 +1,13 @@
 $('.note-edit-form').toggle().html("<%= escape_javascript(render partial: 'notes/edit') %>");
 
+$('#note-title').focus();
+var savedInput = $('#note-title').val();
+$('#note-title').val('');
+$('#note-title').val(savedInput);
 
 
 $('.edit').on('submit', function(){
   var title = $('#note-title').val();
-  console.log(title);
   $('#note-show-title').text(title);
   $('.note-edit-form').toggle();
 });
-
-
-
-// $('form#note-edit-form').trigger('submit.rails');

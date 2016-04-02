@@ -1,11 +1,11 @@
 <h5 class='h5-headers'>New Stamp</h5>
 
 <div class='stamp-form'>
-  <%= form_for :stamp, url: stamps_path do |f| %>
+  <%= form_for :stamp, url: stamps_path, remote: true, id: 'stamp-form' do |f| %>
     <div class='row'>
       <div class='col s1'><a href='#' class="btn-floating btn waves-effect waves-light green", title='add'><i class="material-icons">add</i></a></div>
       <div class='col s3'>
-        <%= f.text_field :time, placeholder: "time" %>
+        <%= f.text_field :time, placeholder: "time", id: 'time-input' %>
       </div>
     </div>
     <div class='input-field'>
@@ -15,7 +15,9 @@
       <%= f.hidden_field :note_id, value: @note.id %>
     </div>
     <div>
-      <%= f.submit "insert a new timestamp", class: "waves-effect waves-light btn"%>
+      <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
+        <i class='large material-icons'>done</i>
+      <% end %>
     </div>
   <% end %>
 </div>
