@@ -1,1 +1,1 @@
-$('stamp-edit-form').toggle().html("<%= j render partial: 'stamps/edit' %>");
+$('#stamp-edit-form').toggle().html("<%= escape_javascript(render partial: 'stamps/edit') %>");

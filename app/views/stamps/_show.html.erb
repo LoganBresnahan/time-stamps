@@ -8,7 +8,7 @@
             <div class='col s2'><div class='chip'><%= stamp.time %></div></div>
             <div class='col s10'><div class='wordwrap'><%= stamp.body %></div></div>
           </div>
-          <div id='stamp-edit-form' style="display:inline;"></div>
+          <div id='stamp-edit-form' style="display:none;"></div>
         </div>
         <div class='col s1'>
           <%= link_to ("<i class='large material-icons'>mode_edit</i>").html_safe, edit_stamp_path(stamp), class: "btn-floating btn-small waves-effect waves-light blue", title: 'edit', remote: true %>

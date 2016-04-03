@@ -1,6 +1,6 @@
 <h3>edit your timestamp</h3>
 
-<%= form_for :stamp, method: :put, url: stamp_path do |f| %>
+<%= form_for :stamp, method: :put, url: stamp_path, remote: true do |f| %>
   <div>
     <%= f.label :time %>
     <%= f.text_field :time, placeholder: "#{@stamp.time}" %>
