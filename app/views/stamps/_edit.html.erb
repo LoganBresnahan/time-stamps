@@ -1,17 +1,19 @@
-<%= form_for :stamp, method: :put, url: stamp_path, remote: true do |f| %>
-  <div class='row'>
-    <div class='col s11'>
-      <div>
-        <%= f.text_field :time, id: 'time-field', placeholder: "#{@stamp.time}" %>
+<!-- <div class='stamp-edit'> -->
+  <%= form_for :stamp, method: :put, url: stamp_path, remote: true do |f| %>
+    <div class='row'>
+      <div class='col s11'>
+        <div>
+          <%= f.text_field :time, id: "#{@stamp.id}", placeholder: "#{@stamp.time}" %>
+        </div>
+        <div>
+          <%= f.text_field :body, placeholder: "#{@stamp.body}" %>
+        </div>
       </div>
-      <div>
-        <%= f.text_field :body, placeholder: "#{@stamp.body}" %>
+      <div class='col s1'>
+        <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
+          <i class='large material-icons'>done</i>
+        <% end %>
       </div>
     </div>
-    <div class='col s1'>
-      <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
-        <i class='large material-icons'>done</i>
-      <% end %>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+<!-- </div> -->

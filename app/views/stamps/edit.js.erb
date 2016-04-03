@@ -1,7 +1,6 @@
-
 $('#<%= @stamp.id %>').toggle().html("<%= escape_javascript(render partial: 'stamps/edit') %>");
 
-$('#time-field').focus();
-var time = $('#time-field').val();
-$('#time-field').val("");
-$('#time-field').val(time);
+$("input[id='<%= @stamp.id %>']").focus();
+var time = $("input[id='<%= @stamp.id %>']").val();
+$("input[id='<%= @stamp.id %>']").val("");
+$("input[id='<%= @stamp.id %>']").val(time);
