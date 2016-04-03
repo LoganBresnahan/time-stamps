@@ -5,8 +5,8 @@
         <div>
           <%= f.text_field :time, id: "#{@stamp.id}", placeholder: "#{@stamp.time}" %>
         </div>
-        <div>
-          <%= f.text_field :body, placeholder: "#{@stamp.body}" %>
+        <div class='input-field'>
+          <%= f.text_area :body, placeholder: "#{@stamp.body}", id: 'textarea1', class: 'materialize-textarea' %>
         </div>
       </div>
       <div class='col s1'>
