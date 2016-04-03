@@ -8,10 +8,10 @@
             <div class='col s2'><div class='chip'><%= stamp.time %></div></div>
             <div class='col s10'><div class='wordwrap'><%= stamp.body %></div></div>
           </div>
-          <div id='stamp-edit-form' style="display:none;"></div>
+          <div id="<%= stamp.id %>" style="display:none;"></div>
         </div>
         <div class='col s1'>
-          <%= link_to ("<i class='large material-icons'>mode_edit</i>").html_safe, edit_stamp_path(stamp), class: "btn-floating btn-small waves-effect waves-light blue", title: 'edit', remote: true %>
+          <%= link_to ("<i class='large material-icons'>mode_edit</i>").html_safe, edit_stamp_path(stamp), class: "btn-floating btn-small waves-effect waves-light blue", title: 'edit', remote: true, id: 'test' %>
         </div>
         <div class='col s1'>
           <%= link_to ("<i class='large material-icons'>delete</i>").html_safe, stamp, url: stamp_path(stamp.id), method: :delete, data: { confirm: "are you sure?" }, class: "btn-floating btn-small waves-effect waves-light red", title: 'delete' %>
