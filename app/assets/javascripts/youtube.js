@@ -7,8 +7,9 @@ function youtubeParser(url){
   return (match&&match[7].length==11)? match[7] : false;
 };
 // youtubeParser($("input[id='.youtube-link']").val())
+
 $('.youtube-new-form').on('submit', '.youtube-form', function(){
-var parsedUrl = youtubeParser($('.youtube-link').val());
+  var parsedUrl = youtubeParser($('.youtube-link').val());
 
 console.log($('.youtube-link').val());
 console.log(parsedUrl);
