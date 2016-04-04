@@ -1,21 +1,23 @@
-<header class='boxed-edit'>
-  <h2><%= @user.username %></h2>
-  <p id='user-edit'><%= link_to ("<i class='large material-icons'>mode_edit</i>").html_safe, edit_user_path(@user), class: "btn-floating btn waves-effect waves-light blue", title: 'edit' %></p>
-</header>
+<div id='user-show'>
+  <header class='boxed-edit'>
+    <h2><%= @user.username %></h2>
+    <p id='user-edit'><%= link_to ("<i class='large material-icons'>mode_edit</i>").html_safe, edit_user_path(@user), class: "btn-floating btn waves-effect waves-light blue", title: 'edit' %></p>
+  </header>
 
-<h3>Your Notes</h3>
-<% @user.notes.each do |note| %>
-  <ul>
-    <li class='user-list'><%= link_to note.title, note_path(note) %></li>
-  </ul>
-<% end %>
+  <h4>Your Notes</h4>
+  <% @user.notes.each do |note| %>
+    <ul>
+      <li class='user-list'><%= link_to note.title, note_path(note) %></li>
+    </ul>
+  <% end %>
 
-<h3>All videos you've used.</h3>
-<% @user.videos.each do |video| %>
-  <ul>
-    <li class='user-list'><%= link_to video.title, video_path(video) %></li>
-  </ul>
-<% end %>
+  <h4>All videos you've used.</h4>
+  <% @user.videos.each do |video| %>
+    <ul>
+      <li class='user-list'><%= link_to video.title, video_path(video) %></li>
+    </ul>
+  <% end %>
 
-<h3>Total timestamps created</h3>
-<%= @user.stamps.size %>
+  <h4>Total timestamps created</h4>
+  <%= @user.stamps.size %>
+</div>
