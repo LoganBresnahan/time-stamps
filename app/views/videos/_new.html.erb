@@ -5,7 +5,7 @@
     <%= f.text_field :title, placeholder: "title" %>
   </div>
   <div>
-    <%= f.text_field :link, placeholder: "paste youtube link here" %>
+    <%= f.text_field :link, placeholder: "paste youtube link here", id: 'youtube-link' %>
   </div>
   <div>
     <%= f.hidden_field :note_id, value: @note.id %>
