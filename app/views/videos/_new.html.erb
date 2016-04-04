@@ -1,11 +1,11 @@
 <h5 class='h5-headers'>New Video</h5>
 
-<%= form_for :video, url: videos_path do |f|%>
+<%= form_for :video, url: videos_path, class: 'youtube-form' do |f|%>
   <div>
     <%= f.text_field :title, placeholder: "title" %>
   </div>
   <div>
-    <%= f.text_field :link, placeholder: "paste youtube link here", id: 'youtube-link' %>
+    <%= f.text_field :link, placeholder: "paste youtube link here", class: 'youtube-link' %>
   </div>
   <div>
     <%= f.hidden_field :note_id, value: @note.id %>
