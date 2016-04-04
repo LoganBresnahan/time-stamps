@@ -5,12 +5,14 @@
     <%= f.text_field :title, placeholder: "title" %>
   </div>
   <div>
-    <%= f.text_field :link, placeholder: "paste youtube link here" %>
+    <%= f.text_field :link, placeholder: "paste youtube link here", id: 'youtube-link' %>
   </div>
   <div>
     <%= f.hidden_field :note_id, value: @note.id %>
   </div>
   <div id='video-submit'>
-    <%= f.submit "insert the new video" %>
+    <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
+      <i class='large material-icons'>done</i>
+    <% end %>
   </div>
 <% end %>

@@ -8,3 +8,17 @@
   margin-top: 3.25em;
   margin-left: 1em;
 }
+
+.side-pages {
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+}
+
+#user-show {
+  margin-left: 25%;
+}
+
+.user-edit-buttons {
+  margin-left: 40%;
+}

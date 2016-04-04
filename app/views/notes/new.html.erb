@@ -1,18 +1,20 @@
-<h2>Get started by making a new note.</h2>
-
-<% if current_user %>
-  <%= form_for :note, url: notes_path do |f| %>
-    <div>
-      <%= f.label :title %>
-      <%= f.text_field :title, placeholder: 'title' %>
-    </div>
-    <div>
-      <%= f.hidden_field :user_id, value: current_user.id %>
-    </div>
-    <div>
-      <%= f.submit 'new note' %>
-    </div>
+<div class='side-pages'>
+  <% if current_user %>
+    <h3>Get started by making a new note.</h3>
+    <%= form_for :note, url: notes_path do |f| %>
+      <div>
+        <%= f.text_field :title, placeholder: 'title', autofocus: true %>
+      </div>
+      <div>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+      </div>
+      <div>
+        <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
+          <i class='large material-icons'>done</i>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
+    <h3>Login to start making a note.</h3>
   <% end %>
-<% else %>
-  <h3>Login to start making a note.</h3>
-<% end %>
+</div>
