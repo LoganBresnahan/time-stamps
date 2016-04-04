@@ -1,6 +1,6 @@
 <header class='boxed-edit'>
-  <h3><%= @user.username %></h3>
-  <p id='user-edit'><%= link_to :edit, edit_user_path(@user) %></p>
+  <h2><%= @user.username %></h2>
+  <p id='user-edit'><%= link_to ("<i class='large material-icons'>mode_edit</i>").html_safe, edit_user_path(@user), class: "btn-floating btn waves-effect waves-light blue", title: 'edit' %></p>
 </header>
 
 <h3>Your Notes</h3>
