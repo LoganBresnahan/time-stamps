@@ -1,0 +1,6 @@
+$('.video-edit-form').toggle().html("<%= escape_javascript(render partial: 'videos/edit') %>")
+
+$('#video-title-form').focus();
+var videoTitle = $('#video-title-form').val();
+$('#video-title-form').val('');
+$('#video-title-form').val(videoTitle);

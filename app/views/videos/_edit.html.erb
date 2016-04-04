@@ -1,0 +1,17 @@
+<div class='row'>
+  <%= form_for :video, method: :put, url: video_path, remote: true do |f| %>
+    <div class='col s10'>
+      <div>
+        <%= f.text_field :title, placeholder: "#{@video.title}", id: 'video-title-form' %>
+      </div>
+      <div>
+        <%= f.text_field :link, placeholder: "#{@video.link}" %>
+      </div>
+    </div>
+    <div class='col s1'>
+      <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
+        <i class='large material-icons'>done</i>
+      <% end %>
+    </div>
+  <% end %>
+</div>
