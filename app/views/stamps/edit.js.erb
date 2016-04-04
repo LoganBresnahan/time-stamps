@@ -1,1 +1,6 @@
-$('stamp-edit-form').toggle().html("<%= j render partial: 'stamps/edit' %>");
+$('#<%= @stamp.id %>').toggle().html("<%= escape_javascript(render partial: 'stamps/edit') %>");
+
+$("input[id='<%= @stamp.id %>']").focus();
+var time = $("input[id='<%= @stamp.id %>']").val();
+$("input[id='<%= @stamp.id %>']").val("");
+$("input[id='<%= @stamp.id %>']").val(time);

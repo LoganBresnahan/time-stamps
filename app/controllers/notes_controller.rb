@@ -24,15 +24,12 @@ class NotesController < ApplicationController
 
   def update
     note = Note.find(params[:id])
-    respond_to do |format|
       if note.update_attributes(note_params)
-        format.html { redirect_to note_path(note) }
-        # format.js
+        redirect_to note_path(note)
       else
         flash[:note_update_error] = note.errors.full_messages.to_sentence
         render :edit
       end
-    end
   end
 
   def edit
