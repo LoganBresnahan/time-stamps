@@ -32,9 +32,12 @@ class StampsController < ApplicationController
   end
 
   def destroy
-    stamp = Stamp.find(params[:id])
+    @stamp = Stamp.find(params[:id])
     Stamp.find(params[:id]).destroy
-    redirect_to note_path(stamp.note_id)
+    respond_to do |format|
+      format.html { redirect_to note_path(@stamp.note_id) }
+      format.js
+    end
   end
 
   private
