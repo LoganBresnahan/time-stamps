@@ -2,18 +2,22 @@
 
 <%= form_for :user, method: :put, url: user_path do |f| %>
   <div>
-    <%= f.label :username %>
     <%= f.text_field :username, placeholder: "#{@user.username}" %>
   </div>
   <div>
-    <%= f.label :email %>
     <%= f.email_field :email, placeholder: "#{@user.email}" %>
   </div>
   <div>
-    <%= f.label :password %>
     <%= f.password_field :password, placeholder: "password" %>
   </div>
-  <div>
-    <%= f.submit "commit changes" %>
+  <div class='row'>
+    <div class='col s1'>
+      <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
+        <i class='large material-icons'>done</i>
+      <% end %>
+    </div>
+  <% end %>
+  <div class='col s1'>
+    <%= link_to ("<i class='large material-icons'>delete</i>").html_safe, @user, url: user_path(@user.id), method: :delete, data: { confirm: "are you sure?" }, class: "btn-floating btn-small waves-effect waves-light red", title: 'delete' %>
   </div>
-<% end %>
+  </div>
