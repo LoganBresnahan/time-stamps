@@ -11,6 +11,8 @@
     <%= f.hidden_field :note_id, value: @note.id %>
   </div>
   <div id='video-submit'>
-    <%= f.submit "insert the new video" %>
+    <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
+      <i class='large material-icons'>done</i>
+    <% end %>
   </div>
 <% end %>
