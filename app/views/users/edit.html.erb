@@ -17,7 +17,7 @@
       <% end %>
     </div>
   <% end %>
-  <div class='col s1'>
-    <%= link_to ("<i class='large material-icons'>delete</i>").html_safe, @user, url: user_path(@user.id), method: :delete, data: { confirm: "are you sure?" }, class: "btn-floating btn-small waves-effect waves-light red", title: 'delete' %>
-  </div>
+    <div class='col s1'>
+      <%= link_to ("<i class='large material-icons'>delete</i>").html_safe, @user, url: user_path(@user.id), method: :delete, data: { confirm: "are you sure?" }, class: "btn-floating btn-small waves-effect waves-light red", title: 'delete' %>
+    </div>
   </div>
