@@ -6,14 +6,11 @@ class VideosController < ApplicationController
 
   def create
     video = Video.new(video_params)
-    respond_to do |format|
-      if video.save
-         format.html { redirect_to note_path(video.note_id) }
-        #  format.js
-      else
-        flash[:video_create_error] = video.errors.full_messages.to_sentence
-        redirect_to note_path(video.note_id)
-      end
+    if video.save
+       redirect_to note_path(video.note_id)
+    else
+      flash[:video_create_error] = video.errors.full_messages.to_sentence
+      redirect_to note_path(video.note_id)
     end
   end
 
