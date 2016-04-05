@@ -6,7 +6,7 @@ class VideosController < ApplicationController
 
   def create
     video = Video.new(video_params)
-    @note = video.note_id
+    @note = Note.find(video.note_id)
     respond_to do |format|
       if video.save
          format.html { redirect_to note_path(video.note_id) }
