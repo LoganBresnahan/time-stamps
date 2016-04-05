@@ -8,12 +8,6 @@
 
     <div class='video-show-list' style="display:inline;"><%= render partial: '/videos/show' %></div>
 
-    <% if @note.videos.size < 1 %>
-      <div class='youtube-new-form'>
-        <%= render '/videos/new' %>
-      </div>
-    <% end %>
-
     <div>
       <%= render '/stamps/new' %>
     </div>

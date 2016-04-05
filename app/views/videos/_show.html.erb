@@ -15,3 +15,9 @@
   <% end %>
   <div class='video-edit-form' style='display:none;'></div>
 </div>
+
+<% if @note.videos.size < 1 %>
+  <div class='youtube-new-form'>
+    <%= render '/videos/new' %>
+  </div>
+<% end %>
