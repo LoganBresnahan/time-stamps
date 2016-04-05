@@ -1,24 +1,26 @@
-<h5 class='h5-headers'>New Video</h5>
+<div class='video-hook'>
+  <h5 class='h5-headers'>New Video</h5>
 
-<%= form_for :video, url: videos_path, class: 'youtube-form', remote: true do |f|%>
-  <div class='row'>
-    <div class='col s10'>
-      <div>
-        <%= f.text_field :link, placeholder: "paste youtube link here", class: 'youtube-link', autofocus: true %>
+  <%= form_for :video, url: videos_path, class: 'youtube-form', remote: true do |f|%>
+    <div class='row'>
+      <div class='col s10'>
+        <div>
+          <%= f.text_field :link, placeholder: "paste youtube link here", class: 'youtube-link', autofocus: true %>
+        </div>
+        <div>
+          <%= f.text_field :title, placeholder: "title" %>
+        </div>
       </div>
       <div>
-        <%= f.text_field :title, placeholder: "title" %>
+        <%= f.hidden_field :note_id, value: @note.id %>
+      </div>
+      <div class='col s1'>
+        <div id='video-submit'>
+          <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
+            <i class='large material-icons'>done</i>
+          <% end %>
+        </div>
       </div>
     </div>
-    <div>
-      <%= f.hidden_field :note_id, value: @note.id %>
-    </div>
-    <div class='col s1'>
-      <div id='video-submit'>
-        <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
-          <i class='large material-icons'>done</i>
-        <% end %>
-      </div>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
