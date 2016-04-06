@@ -8,7 +8,8 @@
     <div>
       <div id="player"></div>
     </div>
-    <div class='this-thing'> <%= @note.videos.find(93).link %> </div>
+    <div class='this-thing' style='display:none;'> <%= @note.videos.find(94).link %> </div>
+
     <div class='video-show-list' style="display:inline;"><%= render partial: '/videos/show' %></div>
 
     <div>
@@ -32,7 +33,7 @@ function youtubeParser(url){
 };
   var link = $('.this-thing').html();
   console.log(link);
-  var parsedUrl = youtubeParser(link);
+  var parsedUrl = youtubeParser(link).trim();
   console.log(parsedUrl);
 
 
