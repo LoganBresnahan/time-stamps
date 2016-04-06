@@ -21,9 +21,9 @@ class VideosController < ApplicationController
   def new
   end
 
-  def show
-    @video = Video.find(params[:id])
-  end
+  # def show
+  #   @video = Video.find(params[:id])
+  # end
 
   def update
     video = Video.find(params[:id])
