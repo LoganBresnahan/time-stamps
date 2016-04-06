@@ -21,14 +21,19 @@
   </div>
 
 </div>
-<!-- <script>
+<script>
 function youtubeParser(url){
   var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
   var match = url.match(regExp);
-  return (match&&match[7].length==11)? match[7] : false;
+  console.log(url);
+  console.log(match);
+  console.log(match[7])
+  return (match&&match[7].trim().length==11)? match[7] : false;
 };
-
-  var parsedUrl = youtubeParser($('.this-thing').val());
+  var link = $('.this-thing').html();
+  console.log(link);
+  var parsedUrl = youtubeParser(link);
+  console.log(parsedUrl);
 
 
 // 2. This code loads the IFrame Player API code asynchronously.
@@ -70,4 +75,4 @@ function youtubeParser(url){
      function stopVideo() {
        player.stopVideo();
      }
-    </script> -->
+    </script>
