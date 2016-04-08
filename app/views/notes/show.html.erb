@@ -23,13 +23,6 @@
 </div>
 
 <script>
-function getDuration() {
-  var test = player.getDuration();
-  console.log(test);
-}
-</script>
-
-<script>
   function youtubeParser(url){
     var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
     var match = url.match(regExp);
@@ -72,7 +65,6 @@ function getDuration() {
      var done = false;
      function onPlayerStateChange(event) {
        if (event.data == YT.PlayerState.PLAYING && !done) {
-         setTimeout(stopVideo, 6000);
          done = true;
        }
      }
@@ -80,36 +72,10 @@ function getDuration() {
        player.stopVideo();
      }
 
-     function prettySeconds(longSeconds){
-       var decimalCut = Math.floor(longSeconds);
-       var minutes = Math.floor(decimalCut/60);
-       var seconds = decimalCut - (minutes * 60);
-       if(seconds < 10){
-         seconds = "0" + seconds;
-       };
-       return minutes + ":" + seconds;
-     }
-
-     function uglySeconds(formatedTime){
-       var myMinutes = /\#([0-9]*)/;
-       minutes = myMinutes.exec(formatedTime)[1];
-
-       var minutesToSeconds = parseInt(minutes) * 60;
-
-       var mySeconds = /\:([0-9]*)/;
-       seconds = mySeconds.exec(formatedTime)[1];
-      //  console.log(seconds);
-       return minutesToSeconds + parseInt(seconds);
-     }
-
-    //  console.log(uglySeconds("1:20"));
-
-
+     
      $('#get-time').on('click', function(){
          var currentTime = player.getCurrentTime();
          $('#time-input').val(prettySeconds(currentTime));
      });
-
-
 
 </script>
