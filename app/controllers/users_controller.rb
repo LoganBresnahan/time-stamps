@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_url
     else
-      flash[:user_create_error] = user.errors.full_messages.to_sentence
+      flash[:user_create_error] = "Error registering"
       render :new
     end
   end
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     if user.update_attributes(user_params)
       redirect_to user_path(user)
     else
-      flash[:user_update_error] = user.errors.full_messages.to_sentence
+      flash[:user_update_error] = "Error updating"
       render :edit
     end
   end

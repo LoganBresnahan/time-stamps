@@ -12,7 +12,7 @@ class VideosController < ApplicationController
          format.html { redirect_to note_path(video.note_id) }
          format.js
       else
-        flash[:video_create_error] = video.errors.full_messages.to_sentence
+        flash[:video_create_error] = "Error creating video"
         redirect_to note_path(video.note_id)
       end
     end
@@ -30,7 +30,7 @@ class VideosController < ApplicationController
     if video.update_attributes(video_params)
       redirect_to note_path(video.note_id)
     else
-      flash[:video_update_error] = video.errors.full_messages.to_sentence
+      flash[:video_update_error] = "Error updating video"
       render :edit
     end
   end
