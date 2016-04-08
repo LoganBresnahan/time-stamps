@@ -9,7 +9,8 @@ $('.video-edit').on('submit', function(){
   var title = $('#video-title-form').val();
   $('#video-title').text(title);
   $('.video-edit-form').toggle();
+})
 
-
-
+$('#reload').on('click', function(){
+  location.reload();
 })
