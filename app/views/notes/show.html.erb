@@ -91,16 +91,18 @@ function getDuration() {
      }
 
      function uglySeconds(formatedTime){
-       var myMinutes = /[0-9]*/;
-       minutes = myMinutes.exec(formatedTime)[0];
+       var myMinutes = /\#([0-9]*)/;
+       minutes = myMinutes.exec(formatedTime)[1];
 
        var minutesToSeconds = parseInt(minutes) * 60;
 
        var mySeconds = /\:([0-9]*)/;
-       seconds = mySeconds.exec(formatedTime)[0];
-
+       seconds = mySeconds.exec(formatedTime)[1];
+      //  console.log(seconds);
        return minutesToSeconds + parseInt(seconds);
      }
+
+    //  console.log(uglySeconds("1:20"));
 
 
      $('#get-time').on('click', function(){
