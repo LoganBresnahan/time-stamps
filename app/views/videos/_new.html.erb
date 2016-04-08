@@ -1,7 +1,7 @@
 <div class='video-hook'>
   <h5 class='h5-headers'>New Video</h5>
 
-  <%= form_for :video, url: videos_path, class: 'youtube-form', remote: true do |f|%>
+  <%= form_for :video, url: videos_path, class: 'youtube-form' do |f|%>
     <div class='row'>
       <div class='col s4'>
         <div>
@@ -16,7 +16,7 @@
       </div>
       <div class='col s1'>
         <div id='video-submit'>
-          <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
+          <%= button_tag id: 'video-submit', class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
             <i class='large material-icons'>done</i>
           <% end %>
         </div>
