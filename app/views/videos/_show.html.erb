@@ -3,11 +3,11 @@
 
   <div class='this-thing' style='display:none;'> <%= video.link %> </div>
     <div class='row'>
-      <div class='col s6'><h5 id='video-title'><%= video.title %></h5></div>
-      <div class='col s1'>
+      <div class='col s4'><h5 id='video-title'><%= video.title %></h5></div>
+      <div class='col'>
         <%= link_to ("<i class='large material-icons'>mode_edit</i>").html_safe, edit_video_path(video), class: "btn-floating btn waves-effect waves-light blue", title: 'edit', remote: true %>
       </div>
-      <div class='col s1'>
+      <div class='col'>
         <%= link_to ("<i class='large material-icons'>delete</i>").html_safe, video, method: :delete, url: video_path(video.id), data: { confirm: "are you sure?" }, class: "btn-floating btn waves-effect waves-light red", title: 'delete' %>
       </div>
     </div>

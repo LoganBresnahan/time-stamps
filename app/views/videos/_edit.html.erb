@@ -1,7 +1,7 @@
 <div class='video-edit'>
   <%= form_for :video, method: :put, url: video_path, remote: true, class: 'youtube-form' do |f| %>
     <div class='row'>
-      <div class='col s10'>
+      <div class='col s4'>
         <div>
           <%= f.text_field :title, placeholder: "#{@video.title}", id: 'video-title-form' %>
         </div>
@@ -13,7 +13,7 @@
         </div>
       </div>
     <div class='row'>
-      <div class='col s10'>
+      <div class='col s4'>
         <div>
           <%= f.text_field :link, placeholder: "#{@video.link}", class: 'youtube-link' %>
         </div>
