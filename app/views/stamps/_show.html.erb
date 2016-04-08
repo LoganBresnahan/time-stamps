@@ -1,5 +1,5 @@
 <div id='stamp-list'>
-  <% @note.stamps.each do |stamp| %>
+  <% sort_time(@note.stamps).each do |stamp| %>
     <div class="<%= stamp.id %>">
       <div class='row'>
         <ul>
