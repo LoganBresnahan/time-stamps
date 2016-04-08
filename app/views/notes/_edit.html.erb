@@ -4,13 +4,13 @@
       <div class='col s4'>
         <%= f.text_field :title, placeholder: "#{@note.title}", id: 'note-title' %>
       </div>
-      <div class='col s1'>
+      <div class='col'>
         <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
           <i class='large material-icons'>done</i>
         <% end %>
       </div>
     <% end %>
-    <div class='col s1'>
+    <div class='col'>
       <%= link_to ("<i class='large material-icons'>delete</i>").html_safe, @note, method: :delete, url: note_path(@note.id), data: { confirm: "are your sure?" }, class: "btn-floating btn waves-effect waves-light red", title: 'delete' %>
     </div>
   </div>

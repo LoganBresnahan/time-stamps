@@ -2,10 +2,10 @@
   <h3 id='note-show-title'> <%= @note.title %> </h3>
   <p id='note-edit-link'> <%= link_to ("<i class='large material-icons'>mode_edit</i>").html_safe, edit_note_path(@note), remote: true, class: "btn-floating btn waves-effect waves-light blue", title: 'edit' %> </p>
 </header>
+<div class='note-edit-form' style="display:none;"></div>
 <div class='video-show-list' style="display:inline;"><%= render partial: '/videos/show' %></div>
 <div class='row'>
   <div class='col s6'>
-    <div class='note-edit-form' style="display:none;"></div>
     <div>
       <div id="player"></div>
     </div>
