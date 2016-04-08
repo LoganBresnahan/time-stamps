@@ -10,7 +10,7 @@ class NotesController < ApplicationController
     if note.save
       redirect_to note_path(note)
     else
-      flash[:note_create_error] = note.errors.full_messages.to_sentence
+      flash[:note_create_error] = "Error creating note"
       render :new
     end
   end
@@ -27,7 +27,7 @@ class NotesController < ApplicationController
       if note.update_attributes(note_params)
         redirect_to note_path(note)
       else
-        flash[:note_update_error] = note.errors.full_messages.to_sentence
+        flash[:note_update_error] = "Error updating note"
         render :edit
       end
   end

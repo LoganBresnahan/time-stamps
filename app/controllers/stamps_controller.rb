@@ -5,7 +5,7 @@ class StampsController < ApplicationController
     if stamp.save
       redirect_to note_path(stamp.note_id)
     else
-      flash[:stamp_create_error] = stamp.errors.full_messages.to_sentence
+      flash[:stamp_create_error] = "Error creating TimeStamp"
       render :new
     end
   end
@@ -22,7 +22,7 @@ class StampsController < ApplicationController
     if stamp.update_attributes(stamp_params)
       redirect_to note_path(stamp.note_id)
     else
-      flash[:stamp_update_error] = stamp.errors.full_messages.to_sentence
+      flash[:stamp_update_error] = "Error updating TimeStamp"
       render :edit
     end
   end

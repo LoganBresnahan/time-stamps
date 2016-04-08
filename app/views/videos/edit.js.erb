@@ -10,3 +10,7 @@ $('.video-edit').on('submit', function(){
   $('#video-title').text(title);
   $('.video-edit-form').toggle();
 })
+
+$('#reload').on('click', function(){
+  location.reload();
+})

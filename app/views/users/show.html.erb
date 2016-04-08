@@ -1,23 +1,31 @@
-<div id='user-show'>
-  <header class='boxed-edit'>
+<div class='side-pages'>
+  <header id='boxed-edit'>
     <h2><%= @user.username %></h2>
     <p id='user-edit'><%= link_to ("<i class='large material-icons'>mode_edit</i>").html_safe, edit_user_path(@user), class: "btn-floating btn waves-effect waves-light blue", title: 'edit' %></p>
   </header>
 
-  <h4>Your Notes</h4>
-  <% @user.notes.each do |note| %>
-    <ul>
-      <li class='user-list'><%= link_to note.title, note_path(note) %></li>
-    </ul>
-  <% end %>
+  <h4>All Notes</h4>
 
-  <h4>All videos you've used.</h4>
-  <% @user.videos.each do |video| %>
-    <ul>
-      <li class='user-list'><%= link_to video.title, video_path(video) %></li>
-    </ul>
-  <% end %>
 
-  <h4>Total timestamps created</h4>
-  <%= @user.stamps.size %>
+  <table class='highlight'>
+    <thead>
+      <tr>
+          <th data-field="id">Notes</th>
+          <th data-field="name">Video Title</th>
+          <th data-field="price">Number of TimeStamps</th>
+      </tr>
+    </thead>
+    <% @user.notes.each do |note| %>
+    <tbody>
+      <tr>
+        <td> <%= link_to note.title, note_path(note) %> </td>
+        <td> <% note.videos.each do |video| %>
+              <%= video.title %>
+             <% end %>
+        </td>
+        <td> <%= note.stamps.size %> </td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
 </div>

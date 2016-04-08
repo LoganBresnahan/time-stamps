@@ -6,6 +6,12 @@
   text-decoration: overline;
 }
 
+#boxed-edit {
+  display: -webkit-box;
+  display: -moz-box;
+  margin-left: 39%;
+}
+
 .boxed-edit {
   display: -webkit-box;
   display: -moz-box;
@@ -24,6 +30,6 @@
   margin-bottom: 2em;
 }
 
-/*.edit {
-  width: 50%;
-}*/
+#welcome {
+  margin-top: 15%;
+}

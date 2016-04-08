@@ -1,12 +1,12 @@
 <div id='stamp-list'>
-  <% @note.stamps.each do |stamp| %>
+  <% sort_time(@note.stamps).each do |stamp| %>
     <div class="<%= stamp.id %>">
       <div class='row'>
         <ul>
           <li>
             <div class='col s10'>
               <div class='row'>
-                <div class='col s2'><div class='chip'><%= stamp.time %></div></div>
+                <div class='col s2'><div style='cursor:pointer' class='chip hoverable'><%= stamp.time %></div></div>
                 <div class='col s10'><div class='wordwrap'><%= stamp.body %></div></div>
               </div>
               <div id="<%= stamp.id %>" style="display:none;"></div>
@@ -21,5 +21,12 @@
         </ul>
       </div>
     </div>
+
+    <script>
+      $('.<%= stamp.id %> .chip').on('click', function(){
+        player.seekTo((uglySeconds('#<%=stamp.time%>')));
+      })
+    </script>
+
   <% end %>
 </div>
