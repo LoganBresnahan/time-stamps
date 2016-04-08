@@ -4,11 +4,10 @@
   <%= form_for :stamp, url: stamps_path, remote: true, id: 'stamp-form' do |f| %>
     <div class='row'>
       <div class='col s1'><div id='get-time' class="btn-floating btn waves-effect waves-light green", title='add'><i class="material-icons">add</i></div></div>
-      <div class='col s2'>
+      <div class='col s3'>
         <%= f.text_field :time, placeholder: "time", id: 'time-input' %>
       </div>
     </div>
-
     <div class='input-field'>
         <%= f.text_area :body, placeholder: "body", id: 'textarea1', class: 'materialize-textarea' %>
     </div>
