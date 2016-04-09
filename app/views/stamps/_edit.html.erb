@@ -4,11 +4,15 @@
       <div>
         <%= f.text_field :time, id: "#{@stamp.id}", placeholder: "#{@stamp.time}" %>
       </div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col s11'>
       <div class='input-field'>
         <%= f.text_area :body, placeholder: "#{@stamp.body}", id: 'textarea1', class: 'materialize-textarea' %>
       </div>
     </div>
-    <div class='col s1'>
+    <div id='body-button' class='col s1'>
       <%= button_tag class: "btn-floating btn waves-effect waves-light yellow", title: 'submit' do %>
         <i class='large material-icons'>done</i>
       <% end %>
