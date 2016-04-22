@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'notes#new'
-  resources :users
+  resources :users, except: [:index]
   resources :notes, except: [:index]
-  resources :videos
+  resources :videos, except: [:index]
   resources :stamps, except: [:index]
   resources :sessions, only: [:create, :new, :destroy]
 
