@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
 
-  def index
-    @users = User.all
-  end
-
   def create
     user = User.new(user_params)
     if user.save
@@ -20,6 +16,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    redirect_to user_path(current_user) unless current_user.id == @user.id
   end
 
   def update
@@ -34,6 +31,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    redirect_to edit_user_path(current_user) unless current_user.id == @user.id
   end
 
   def destroy

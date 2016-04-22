@@ -1,10 +1,5 @@
 class NotesController < ApplicationController
 
-  #Probably don't need this.
-  # def index
-  #   @notes = Note.all
-  # end
-
   def create
     note = Note.new(note_params)
     if note.save
@@ -20,6 +15,7 @@ class NotesController < ApplicationController
 
   def show
     @note = Note.find(params[:id])
+    redirect_to user_path(current_user) unless current_user.notes.include?(@note)
   end
 
   def update

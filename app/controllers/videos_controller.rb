@@ -1,9 +1,5 @@
 class VideosController < ApplicationController
 
-  def index
-    @videos = Video.all
-  end
-
   def create
     video = Video.new(video_params)
     @note = Note.find(video.note_id)
@@ -21,10 +17,6 @@ class VideosController < ApplicationController
 
   def new
   end
-
-  # def show
-  #   @video = Video.find(params[:id])
-  # end
 
   def update
     video = Video.find(params[:id])
