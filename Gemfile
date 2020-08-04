@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.3.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
@@ -32,7 +32,7 @@ gem 'bcrypt', '~> 3.1.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'materialize-sass'
+gem 'materialize-sass', '~> 0.99'
 
 gem 'rails_12factor'
 
