@@ -8,9 +8,11 @@ To run this application:
 
 - Make sure to have Postgres installed on your system. (https://www.postgresql.org/)
 
-- Install Ruby version 2.3.8. You can use a version manager such as rvm, rbenv, or asdf to install different versions of Ruby on your system.
+- Install Ruby version 2.4.3. You can use a version manager such as rvm, rbenv, or asdf to install different versions of Ruby on your system.
 
-- Once Ruby is installed, install the bundler gem (https://bundler.io/gemfile.html) with the command: ```gem install bundler```
+- Once Ruby is installed, install the bundler gem (https://bundler.io/gemfile.html) with the command: ```gem install bundler -v "1.17.3```
+
+- Install the applications dependencies with the command: ```bundle _1.17.3_```
 
 - Create a development database with the command: ```bundle exec rake db:create```
 
